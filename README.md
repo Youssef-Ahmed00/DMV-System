@@ -28,24 +28,38 @@ This **DMV Management System** is a desktop application built using **Java**, **
 
 ---
 
-## 🗃️ Database Schema
+### `citizens` Table
 
-### `citizens` Table:
-| Column Name | Type    | Description              |
-|-------------|---------|--------------------------|
-| id          | INTEGER | Primary Key (auto-inc)   |
-| name        | TEXT    | Full name of the citizen |
-| age         | INTEGER | Age                      |
-| address     | TEXT    | Address                  |
+| Column Name     | Type    | Description                        |
+|------------------|---------|------------------------------------|
+| fullName         | TEXT    | Full name of the citizen           |
+| nationalId       | INTEGER | Unique National ID (Primary key)   |
+| houseNo          | TEXT    | House number/address details       |
+| street           | TEXT    | Street name                        |
+| governorate      | TEXT    | Governorate/region                 |
+| country          | TEXT    | Country                            |
+| birthDate        | TEXT    | Date of birth (YYYY-MM-DD)         |
+| gender           | TEXT    | Gender                             |
+| martialStatues   | TEXT    | Marital status                     |
+| religion         | TEXT    | Religion                           |
 
-### `licenses` Table:
-| Column Name   | Type    | Description                 |
-|---------------|---------|-----------------------------|
-| id            | INTEGER | Primary Key (auto-inc)      |
-| citizen_id    | INTEGER | Foreign key → citizens(id)  |
-| license_type  | TEXT    | Type of license (e.g., B, C) |
-| issue_date    | TEXT    | Issue date                  |
-| expiry_date   | TEXT    | Expiry date                 |
+---
+
+### `licenses` Table
+
+| Column Name   | Type    | Description                                |
+|---------------|---------|--------------------------------------------|
+| fullName      | TEXT    | Full name of the license holder            |
+| nationalId    | INTEGER | National ID of the citizen (used as key)   |
+| licenseNo     | INTEGER | Unique license number                      |
+| birthDate     | TEXT    | Date of birth (YYYY-MM-DD)                 |
+| issueDate     | TEXT    | License issue date                         |
+| expiryDate    | TEXT    | License expiry date                        |
+| licenseStatus | TEXT    | Status (e.g., Valid, Expired, Suspended)   |
+| classType     | TEXT    | License class (e.g., A, B, C)              |
+| restriction   | TEXT    | Special conditions or restrictions         |
+
+> All fields except `fullName`, `nationalId`, and `licenseNo` are marked as **NOT NULL**.
 
 ---
 ## Code Project
