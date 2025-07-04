@@ -66,5 +66,5 @@ This **DMV Management System** is a desktop application built using **Java**, **
 Fell free to check out the code project and run it 
 
 ## Tip To Run The Projuct You Must Pass Through the login 
-Username= Youssef
-Password = 2406241
+## UserName = Youssef
+## Password = 2406241
