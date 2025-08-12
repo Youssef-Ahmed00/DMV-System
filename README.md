@@ -36,9 +36,9 @@ It enables efficient management of **citizens**, **driver licenses**, and **vehi
 
 ---
 
-## 📂 Project Structure  
 
-```plaintext
+
+## Project Structure
 DMV-System/
 │
 ├── src/                         # Java source code
@@ -54,11 +54,9 @@ DMV-System/
 │
 └── README.md                     # Project documentation
 
----
- 🗄 Database Structure
+DataBase Structure
 -
-citizens Table
-
+# Citizen Table
 | Column Name    | Type    | Description                 |
 | -------------- | ------- | --------------------------- |
 | fullName       | TEXT    | Full name of the citizen    |
@@ -73,7 +71,8 @@ citizens Table
 | religion       | TEXT    | Religion                    |
 
 
-##licenses Table
+# Liscence Table
+
 | Column Name   | Type    | Description                              |
 | ------------- | ------- | ---------------------------------------- |
 | fullName      | TEXT    | Full name of the license holder          |
@@ -86,44 +85,48 @@ citizens Table
 | classType     | TEXT    | License class (A, B, C, etc.)            |
 | restriction   | TEXT    | Special conditions or restrictions       |
 
----
-##🔑 Login Credentials (Demo)
-To run the project successfully, use the following credentials:
-Username: Youssef
-Password: 2406241
+
+## 🔑 Demo Login Credentials
+
+Username: Youssef  
+Password: 2406241 
 
 ---
 
-##🧠 Skills Learned
-📚 JavaFX GUI Development with FXML and controllers
+## 🧠 Skills Learned
+📚 JavaFX GUI Development with FXML controllers
 
-🗄 SQLite Database Integration using JDBC
+🗄 SQLite Integration via JDBC
 
-🧩 Applying OOP principles (encapsulation, inheritance, composition)
+🧩 OOP Principles – Encapsulation, Inheritance, Composition
 
-🖥 Multi-window navigation and event handling in JavaFX
+🖥 Multi-window Navigation & event handling
 
-✅ Form validation and error handling
+✅ Form Validation and error handling
 
-🔄 Real-time table updates on CRUD operations
+🔄 Dynamic Table Updates after CRUD operations
 
-🔐 Role-based authentication
+🔐 Role-based Authentication
 
-🚀 Future Improvements
+##  🚀 Future Improvements
 🌙 Dark Mode for better accessibility
 
-📂 Vehicle Management Module
+## 📂 Vehicle Management Module
 
-🔍 Advanced search filters in citizens/licenses tables
+🔍 Advanced Search Filters for citizens/licenses
 
-📊 Statistics Dashboard (e.g., total licenses, expired licenses)
+📊 Statistics Dashboard (total licenses, expired licenses, etc.)
 
-📩 Export data to PDF/Excel
+📩 Export Data to PDF/Excel
 
-🔐 Password hashing for better security
----
+🔐 Password Hashing for enhanced security
 
-💻 Developed by: Youssef Ahmed
--
-📅 Year: 2025
+## 👨‍💻 Author
+Youssef Ahmed
+📅 2025
 📜 License: MIT
+
+
+
+
+
