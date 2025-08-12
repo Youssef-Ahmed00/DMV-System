@@ -1,72 +1,129 @@
-# DMV Management System (JavaFX + SQLite)
+# 🚗 DMV Management System (JavaFX + SQLite)
 
-## 📋 Project Overview
-
-This **DMV Management System** is a desktop application built using **Java**, **JavaFX** for GUI, and **SQLite** for database management. It provides an interface for managing **citizens**, **driver licenses**, and **vehicles**, applying core **Object-Oriented Programming (OOP)** principles like encapsulation, inheritance, and composition.
-
----
-
-## 🎯 Features
-
-✅ Multi-window JavaFX GUI  
-✅ SQLite database with **citizen** and **license** tables  
-✅ Full **CRUD operations** (Create, Read, Update, Delete)  
-✅ Role-based login system (Admin/User)  
-✅ Form validation with error handling  
-✅ Real-time table view updates  
-✅ Clean modular OOP structure  
+[![Java](https://img.shields.io/badge/Java-Programming-red?style=for-the-badge&logo=java&logoColor=white)](https://www.java.com/)  
+[![JavaFX](https://img.shields.io/badge/JavaFX-GUI-blue?style=for-the-badge&logo=java&logoColor=white)](https://openjfx.io/)  
+[![SQLite](https://img.shields.io/badge/SQLite-Database-blueviolet?style=for-the-badge&logo=sqlite&logoColor=white)](https://www.sqlite.org/index.html)  
 
 ---
 
-## 🧱 Tech Stack
+## 📋 Overview  
+The **DMV Management System** is a desktop application built using **Java**, **JavaFX** for the graphical user interface, and **SQLite** for database management.  
+It enables efficient management of **citizens**, **driver licenses**, and **vehicles** while applying **Object-Oriented Programming (OOP)** principles such as encapsulation, inheritance, and composition.
 
-- **Java SE 8+**
-- **JavaFX (FXML)**
-- **SQLite**
-- **JDBC (Java Database Connectivity)**
-- **SceneBuilder (optional, for GUI design)**
+📌 **Repository Link:** [DMV-System on GitHub](https://github.com/Youssef-Ahmed00/DMV-System.git)  
 
 ---
 
-### `citizens` Table
+## ✨ Features  
 
-| Column Name     | Type    | Description                        |
-|------------------|---------|------------------------------------|
-| fullName         | TEXT    | Full name of the citizen           |
-| nationalId       | INTEGER | Unique National ID (Primary key)   |
-| houseNo          | TEXT    | House number/address details       |
-| street           | TEXT    | Street name                        |
-| governorate      | TEXT    | Governorate/region                 |
-| country          | TEXT    | Country                            |
-| birthDate        | TEXT    | Date of birth (YYYY-MM-DD)         |
-| gender           | TEXT    | Gender                             |
-| martialStatues   | TEXT    | Marital status                     |
-| religion         | TEXT    | Religion                           |
+✅ **Multi-window JavaFX GUI** for smooth navigation  
+✅ **SQLite Database** with `citizens` and `licenses` tables  
+✅ **Full CRUD operations** (Create, Read, Update, Delete)  
+✅ **Role-based login system** (Admin / User)  
+✅ **Form validation** with detailed error handling  
+✅ **Real-time table view updates** after operations  
+✅ **Clean modular OOP structure** for scalability  
 
 ---
 
-### `licenses` Table
+## 🧱 Tech Stack  
 
-| Column Name   | Type    | Description                                |
-|---------------|---------|--------------------------------------------|
-| fullName      | TEXT    | Full name of the license holder            |
-| nationalId    | INTEGER | National ID of the citizen (used as key)   |
-| licenseNo     | INTEGER | Unique license number                      |
-| birthDate     | TEXT    | Date of birth (YYYY-MM-DD)                 |
-| issueDate     | TEXT    | License issue date                         |
-| expiryDate    | TEXT    | License expiry date                        |
-| licenseStatus | TEXT    | Status (e.g., Valid, Expired, Suspended)   |
-| classType     | TEXT    | License class (e.g., A, B, C)              |
-| restriction   | TEXT    | Special conditions or restrictions         |
+- ☕ **Java SE 8+** – Core application logic  
+- 🎨 **JavaFX (FXML)** – GUI design and event handling  
+- 💾 **SQLite** – Lightweight database management  
+- 🔗 **JDBC** – Java Database Connectivity  
+- 🛠 **SceneBuilder** (optional) – For visual GUI editing  
 
-> All fields except `fullName`, `nationalId`, and `licenseNo` are marked as **NOT NULL**.
-
-
-## Repo Link(https://github.com/Youssef-Ahmed00/DMV-System.git)
 ---
-## Code Project
-Fell free to check out the code project and run it 
 
-## Tip To Run The Projuct You Must Pass Through the login 
-## UserName = Youssef
-## Password = 2406241
+## 📂 Project Structure  
+
+```plaintext
+DMV-System/
+│
+├── src/                         # Java source code
+│   ├── controllers/             # JavaFX controllers for UI
+│   ├── models/                   # OOP models (Citizen, License, etc.)
+│   ├── database/                 # SQLite database connection classes
+│   └── Main.java                 # Application entry point
+│
+├── resources/                    # FXML, CSS, icons
+│   ├── views/                     # FXML UI files
+│   ├── styles.css                 # Styling for JavaFX components
+│   └── dmv.db                     # SQLite database file
+│
+└── README.md                     # Project documentation
+
+---
+ 🗄 Database Structure
+-
+citizens Table
+
+| Column Name    | Type    | Description                 |
+| -------------- | ------- | --------------------------- |
+| fullName       | TEXT    | Full name of the citizen    |
+| nationalId     | INTEGER | Unique National ID (**PK**) |
+| houseNo        | TEXT    | House number / address      |
+| street         | TEXT    | Street name                 |
+| governorate    | TEXT    | Governorate / region        |
+| country        | TEXT    | Country                     |
+| birthDate      | TEXT    | Date of birth (YYYY-MM-DD)  |
+| gender         | TEXT    | Gender                      |
+| martialStatues | TEXT    | Marital status              |
+| religion       | TEXT    | Religion                    |
+
+
+##licenses Table
+| Column Name   | Type    | Description                              |
+| ------------- | ------- | ---------------------------------------- |
+| fullName      | TEXT    | Full name of the license holder          |
+| nationalId    | INTEGER | National ID (**FK** from citizens table) |
+| licenseNo     | INTEGER | Unique license number                    |
+| birthDate     | TEXT    | Date of birth (YYYY-MM-DD)               |
+| issueDate     | TEXT    | License issue date                       |
+| expiryDate    | TEXT    | License expiry date                      |
+| licenseStatus | TEXT    | Status (Valid, Expired, Suspended, etc.) |
+| classType     | TEXT    | License class (A, B, C, etc.)            |
+| restriction   | TEXT    | Special conditions or restrictions       |
+
+---
+##🔑 Login Credentials (Demo)
+To run the project successfully, use the following credentials:
+Username: Youssef
+Password: 2406241
+
+---
+
+##🧠 Skills Learned
+📚 JavaFX GUI Development with FXML and controllers
+
+🗄 SQLite Database Integration using JDBC
+
+🧩 Applying OOP principles (encapsulation, inheritance, composition)
+
+🖥 Multi-window navigation and event handling in JavaFX
+
+✅ Form validation and error handling
+
+🔄 Real-time table updates on CRUD operations
+
+🔐 Role-based authentication
+
+🚀 Future Improvements
+🌙 Dark Mode for better accessibility
+
+📂 Vehicle Management Module
+
+🔍 Advanced search filters in citizens/licenses tables
+
+📊 Statistics Dashboard (e.g., total licenses, expired licenses)
+
+📩 Export data to PDF/Excel
+
+🔐 Password hashing for better security
+---
+
+💻 Developed by: Youssef Ahmed
+-
+📅 Year: 2025
+📜 License: MIT
